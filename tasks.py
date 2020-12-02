@@ -10,7 +10,7 @@ from invoke import task, Responder
 from klaxon import klaxon
 
 APP = "data_pipeline_practice"
-AWS_PROFILE = "personal"
+AWS_PROFILE = "nutrien"
 AWS_REGION = "us-east-2"
 
 # Must separate these by spaces and indicate directories with trailing /
