@@ -24,4 +24,4 @@ venv.bak/
 cdk.out/
 
 # IDE
-.vscode
+.vscode/
