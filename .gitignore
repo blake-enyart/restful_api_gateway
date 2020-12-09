@@ -16,7 +16,12 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+*.env
+*.json.env
 
 # CDK Context & Staging files
 .cdk.staging/
 cdk.out/
+
+# IDE
+.vscode/
