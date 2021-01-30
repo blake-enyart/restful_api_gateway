@@ -766,7 +766,7 @@ standard = ["websockets (>=8.0.0,<9.0.0)", "watchgod (>=0.6,<0.7)", "python-dote
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "4f2cf218ee53847443b81fa5dfa7c2e24eede9a3c7ddda0a26e60507f9b2471b"
+content-hash = "7d5a6f9961959c9c6345a3cb6292dfce7761e24792e2705d02d8ca2a44b8e172"
 
 [metadata.files]
 appdirs = [
