@@ -6,21 +6,16 @@ with open("README.md") as fp:
 
 
 setuptools.setup(
-    name="dbg_pds_data_pipeline_practice",
+    name="restful_api_gateway",
     version="0.0.1",
-    description="A sample CDK Python app",
+    description="A FastAPI, CDK, and Docker RESTful API",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="author",
-    package_dir={"": "dbg_pds_data_pipeline_practice"},
-    packages=setuptools.find_packages(where="dbg_pds_data_pipeline_practice"),
+    author="Blake Enyart",
+    package_dir={"": "restful_api_gateway"},
+    packages=setuptools.find_packages(where="restful_api_gateway"),
     install_requires=[
         "aws-cdk.core==1.76.0",
-        "aws-cdk.aws_iam==1.76.0",
-        "aws-cdk.aws_sqs==1.76.0",
-        "aws-cdk.aws_sns==1.76.0",
-        "aws-cdk.aws_sns_subscriptions==1.76.0",
-        "aws-cdk.aws_s3==1.76.0",
     ],
     python_requires=">=3.6",
     classifiers=[

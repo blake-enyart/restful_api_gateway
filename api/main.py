@@ -16,7 +16,7 @@ app.include_router(router, prefix="/v1")
 
 @app.get("/")
 def read_root():
-    return {"Hello Medium Reader": "from FastAPI & API Gateway"}
+    return {"Hello Medium Reader": "from FastAPI & API Gateway. Go to /docs to see documentation."}
 
 
 # to make it work with AWS Lambda, we create a handler object

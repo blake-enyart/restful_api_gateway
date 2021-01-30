@@ -25,3 +25,4 @@ cdk.out/
 
 # IDE
 .vscode/
+node_modules

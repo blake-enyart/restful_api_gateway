@@ -9,8 +9,8 @@ from pathlib import Path
 from invoke import task, Responder
 from klaxon import klaxon
 
-APP = "data_pipeline_practice"
-AWS_PROFILE = "nutrien"
+APP = "text_to_speech_pipeline"
+AWS_PROFILE = "default"
 AWS_REGION = "us-east-2"
 
 # Must separate these by spaces and indicate directories with trailing /
@@ -114,7 +114,7 @@ def diff(c, profile=AWS_PROFILE, region=AWS_REGION):
 
 
 @task
-def _list(c, profile=AWS_PROFILE):
+def ls(c, profile=AWS_PROFILE):
     """List of CDK stacks that are deployable"""
 
     c.run(f"cdk list --profile {profile}")
@@ -136,12 +136,3 @@ def synth(c, profile=AWS_PROFILE, region=AWS_REGION, stack=None):
             pty=True,
             env={"AWS_DEFAULT_REGION": region},
         )
-
-
-@task
-def s3_bucket_sync(c, source_bucket=None, sink_bucket=None):
-    """Sync an S3 bucket with another S3 bucket"""
-    if not source_bucket or sink_bucket:
-        source_bucket = "s3://deutsche-boerse-eurex-pds/2017-05-27/"
-        sink_bucket = "s3://nutrien-blake-enyart-dev/dbg_pds_RAW/"
-    c.run(f"aws --profile {AWS_PROFILE} s3 sync {source_bucket}* {sink_bucket}*")

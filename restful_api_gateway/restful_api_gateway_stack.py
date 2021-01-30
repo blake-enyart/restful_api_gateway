@@ -11,7 +11,7 @@ class RestfulApiGatewayStack(core.Stack):
 
         fn = _lambda.DockerImageFunction(
             self,
-            "RestfulApiTestFxn",
+            "RestfulApiFxn",
             code=_lambda.DockerImageCode.from_image_asset("api"),
         )
 
