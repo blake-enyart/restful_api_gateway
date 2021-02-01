@@ -1,6 +1,6 @@
 {
     "python.formatting.provider": "black",
-    "python.pythonPath": ".venv/bin/python3",
+    "python.pythonPath": "/Users/blackenyart/gh_projects/restful_api_gateway/.venv/bin/python3.8",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
 }

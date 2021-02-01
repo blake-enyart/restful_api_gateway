@@ -1,3 +1,4 @@
 -e .
-pytest
 -r api/requirements.txt
+poetry
+pytest

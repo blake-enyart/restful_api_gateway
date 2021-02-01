@@ -9,12 +9,12 @@ from pathlib import Path
 from invoke import task, Responder
 from klaxon import klaxon
 
-APP = "text_to_speech_pipeline"
+APP = "restful_api_gateway"
 AWS_PROFILE = "default"
 AWS_REGION = "us-east-2"
 
 # Must separate these by spaces and indicate directories with trailing /
-BLACK_FILEPATH_STR = f"{APP}/ lambda/"
+BLACK_FILEPATH_STR = f"{APP}/ api/"
 
 
 @task
@@ -35,6 +35,8 @@ def install_hooks(c):
     c.run("pre-commit install")
 
     c.run("pre-commit install -t pre-push")
+
+    c.run("npm install -g commitizen")
 
 
 @task
@@ -109,7 +111,9 @@ def diff(c, profile=AWS_PROFILE, region=AWS_REGION):
     """Compare current CDK stack to what was previously deployed."""
 
     c.run(
-        f"cdk diff --profile={profile}", pty=True, env={"AWS_DEFAULT_REGION": region},
+        f"cdk diff --profile={profile}",
+        pty=True,
+        env={"AWS_DEFAULT_REGION": region},
     )
 
 
