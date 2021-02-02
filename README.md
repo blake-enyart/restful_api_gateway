@@ -8,10 +8,20 @@ This API was developed based on the following 2 part series:
 * [FastAPI + AWS = robust API (Part 1)](https://towardsdatascience.com/fastapi-aws-robust-api-part-1-f67ae47390f9)
 * [FastAPI + AWS = secure API (Part 2)](https://towardsdatascience.com/fastapi-aws-secure-api-part-2-1123bff28b55)
 
-# Reference Architecture
+## What is the CDK?
+I find that a picture is worth a thousand words, but I look at the CDK as an abstraction on top of CloudFormation/Terraform that allows developers to rapidly build out solutions.
+
+If you would like to learn more about it [here][CDK] is a great link covering this topic.
 <p align="center">
-    <img src=static/images/Reference%20Architectures%20-%20RESTful%20API%20-%20Architecture.jpg  width="250" height="250" alt="Reference Architecture">
+    <img src=static/images/CDK_concept.jpeg alt="CDK Conceptual Image">
 </p>
+
+## Reference Architecture
+<p align="center">
+    <img src=static/images/Reference%20Architectures%20-%20RESTful%20API%20-%20Architecture.jpg  width="300" height="300" alt="Reference Architecture">
+</p>
+
+## Project Overview
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
@@ -97,3 +107,5 @@ That's it! You are done and now have a fully functioning RESTful API that is com
 * `/trading/{crypto}` Consider whether to trade a crypto or not
 
 Enjoy!
+
+[CDK]: https://aws.amazon.com/blogs/devops/rapid-flexible-infrastructure-with-solutions-constructs-cdk/
