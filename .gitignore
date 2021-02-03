@@ -2,6 +2,8 @@
 package-lock.json
 .pytest_cache
 *.egg-info
+*/.DS_store
+.DS_store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
